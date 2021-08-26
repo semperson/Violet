@@ -1,5 +1,5 @@
-TWEAK_NAME = VioletSpringBoard
-$(TWEAK_NAME)_FILES = VioletSpringBoard.x
+TWEAK_NAME = VioletMusic
+$(TWEAK_NAME)_FILES = VioletMusic.x
 $(TWEAK_NAME)_CFLAGS = -fobjc-arc -DTHEOS_LEAN_AND_MEAN
 $(TWEAK_NAME)_FRAMEWORKS = UIKit
 $(TWEAK_NAME)_PRIVATE_FRAMEWORKS = MediaRemote
