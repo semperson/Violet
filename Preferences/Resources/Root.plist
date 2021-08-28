@@ -34,7 +34,7 @@
  			<key>detail</key>
  			<string>VIOLockScreenSubPreferencesListController</string>
  			<key>VIOSub</key>
- 			<string>sub/lockScreen</string>
+ 			<string>sub/lockscreen</string>
  		</dict>
 		<dict>
  			<key>cell</key>
@@ -44,7 +44,7 @@
  			<key>detail</key>
  			<string>VIOHomeScreenSubPreferencesListController</string>
  			<key>VIOSub</key>
- 			<string>sub/homeScreen</string>
+ 			<string>sub/homescreen</string>
  		</dict>
 		 <dict>
  			<key>cell</key>
@@ -54,7 +54,7 @@
  			<key>detail</key>
  			<string>VIOControlCenterSubPreferencesListController</string>
  			<key>VIOSub</key>
- 			<string>sub/controlCenter</string>
+ 			<string>sub/controlcenter</string>
  		</dict>
 		<dict>
  			<key>cell</key>

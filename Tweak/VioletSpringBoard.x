@@ -54,16 +54,18 @@
 
 	if ([[self label] isEqualToString:@"MRPlatter-CoverSheet"]) {
 		UIView* AdjunctItemView = [[[[[self view] superview] superview] superview] superview];
+		UIView* platterView = [AdjunctItemView valueForKey:@"_platterView"];
 		
 		if (currentArtwork) [self clearMaterialViewBackground];
 		else [self setMaterialViewBackground];
 
 		if (!lockScreenPlayerArtworkBackgroundImageView) lockScreenPlayerArtworkBackgroundImageView = [[UIImageView alloc] initWithFrame:[AdjunctItemView bounds]];
-		[lockScreenPlayerArtworkBackgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
-		[lockScreenPlayerArtworkBackgroundImageView setClipsToBounds:currentArtwork ? NO : YES];
-		[lockScreenPlayerArtworkBackgroundImageView setAlpha:[lockscreenPlayerArtworkOpacityValue doubleValue]];
-		[[lockScreenPlayerArtworkBackgroundImageView layer] setCornerRadius:[lockscreenPlayerArtworkCornerRadiusValue doubleValue]];
 		[lockScreenPlayerArtworkBackgroundImageView setImage:currentArtwork];
+		[lockScreenPlayerArtworkBackgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
+		[lockScreenPlayerArtworkBackgroundImageView setClipsToBounds:YES];
+		[[lockScreenPlayerArtworkBackgroundImageView layer] setCornerRadius:[[platterView layer] cornerRadius]];
+		[[lockScreenPlayerArtworkBackgroundImageView layer] setContinuousCorners:YES];
+		[lockScreenPlayerArtworkBackgroundImageView setAlpha:[lockscreenPlayerArtworkOpacityValue doubleValue]];
 		if (![lockScreenPlayerArtworkBackgroundImageView isDescendantOfView:AdjunctItemView]) [AdjunctItemView insertSubview:lockScreenPlayerArtworkBackgroundImageView atIndex:0];
 
 		if ([lockscreenPlayerArtworkBlurMode intValue] != 0) {
@@ -134,17 +136,19 @@
 
 	if ([self context] == 2) {
 		UIView* AdjunctItemView = [[[[[[self view] superview] superview] superview] superview] superview];
+		UIView* platterView = [AdjunctItemView valueForKey:@"_platterView"];
 		
 		if (currentArtwork) [self clearMaterialViewBackground];
 		else [self setMaterialViewBackground];
 
 		if (!lockScreenPlayerArtworkBackgroundImageView) lockScreenPlayerArtworkBackgroundImageView = [[UIImageView alloc] initWithFrame:[AdjunctItemView bounds]];
+		[lockScreenPlayerArtworkBackgroundImageView setImage:currentArtwork];
 		[lockScreenPlayerArtworkBackgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
 		[lockScreenPlayerArtworkBackgroundImageView setHidden:currentArtwork ? NO : YES];
 		[lockScreenPlayerArtworkBackgroundImageView setClipsToBounds:YES];
+		[[lockScreenPlayerArtworkBackgroundImageView layer] setCornerRadius:[[platterView layer] cornerRadius]];
+		[[lockScreenPlayerArtworkBackgroundImageView layer] setContinuousCorners:YES];
 		[lockScreenPlayerArtworkBackgroundImageView setAlpha:[lockscreenPlayerArtworkOpacityValue doubleValue]];
-		[[lockScreenPlayerArtworkBackgroundImageView layer] setCornerRadius:[lockscreenPlayerArtworkCornerRadiusValue doubleValue]];
-		[lockScreenPlayerArtworkBackgroundImageView setImage:currentArtwork];
 		if (![lockScreenPlayerArtworkBackgroundImageView isDescendantOfView:AdjunctItemView]) [AdjunctItemView insertSubview:lockScreenPlayerArtworkBackgroundImageView atIndex:0];
 
 		if ([lockscreenPlayerArtworkBlurMode intValue] != 0) {
@@ -485,7 +489,6 @@
 			[preferences registerObject:&lockscreenPlayerArtworkBlurMode default:@"0" forKey:@"lockscreenPlayerArtworkBlur"];
 			[preferences registerObject:&lockscreenPlayerArtworkBlurAmountValue default:@"1.0" forKey:@"lockscreenPlayerArtworkBlurAmount"];
 			[preferences registerObject:&lockscreenPlayerArtworkOpacityValue default:@"1.0" forKey:@"lockscreenPlayerArtworkOpacity"];
-			[preferences registerObject:&lockscreenPlayerArtworkCornerRadiusValue default:@"13.0" forKey:@"lockscreenPlayerArtworkCornerRadius"];
 			[preferences registerObject:&lockscreenPlayerArtworkDimValue default:@"0.0" forKey:@"lockscreenPlayerArtworkDim"];
 			[preferences registerBool:&lockscreenPlayerArtworkBackgroundTransitionSwitch default:NO forKey:@"lockscreenPlayerArtworkBackgroundTransition"];
 			if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 14) %init(VioletLockScreenPlayer13);

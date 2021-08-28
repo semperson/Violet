@@ -18,7 +18,6 @@ BOOL lockscreenPlayerArtworkBackgroundSwitch = NO;
 NSString* lockscreenPlayerArtworkBlurMode = @"0";
 NSString* lockscreenPlayerArtworkBlurAmountValue = @"1.0";
 NSString* lockscreenPlayerArtworkOpacityValue = @"1.0";
-NSString* lockscreenPlayerArtworkCornerRadiusValue = @"13.0";
 NSString* lockscreenPlayerArtworkDimValue = @"0.0";
 BOOL lockscreenPlayerArtworkBackgroundTransitionSwitch = NO;
 
@@ -87,6 +86,10 @@ UIView* controlCenterModuleDimView = nil;
 @end
 
 @interface MTMaterialView : UIView
+@end
+
+@interface CALayer (Violet)
+@property(assign)BOOL continuousCorners;
 @end
 
 @interface CABackdropLayer : CALayer
