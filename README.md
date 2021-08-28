@@ -21,6 +21,8 @@ You may not use this project to make profit like money
     - [DaveWijk](https://twitter.com/DaveWijk)
   - Introduction To The Media Remote Framework
     - [NepetaDev](https://twitter.com/NepetaDev)
+  - Continuous Corners To The Control Center Module Background
+    - [AzzouDuGhetto](https://twitter.com/AzzouDuGhetto)
   - Icon And Banner
     - [74k1_](https://twitter.com/74k1_)
   - Duo Twitter Cell
