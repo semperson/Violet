@@ -124,6 +124,18 @@
 
 %end
 
+%hook CSNotificationAdjunctListViewController
+
+- (void)viewDidLoad { // override the appearance style of the player
+
+	%orig;
+
+	if ([lockscreenPlayerStyleOverrideValue intValue] != 0) [self setOverrideUserInterfaceStyle:[lockscreenPlayerStyleOverrideValue intValue]];
+
+}
+
+%end
+
 %end
 
 %group VioletLockScreenPlayer14
@@ -202,6 +214,18 @@
 	MTMaterialLayer* MTLayer = (MTMaterialLayer *)[MTView layer];
 	[MTLayer setScale:1];
 	[MTLayer mt_setColorMatrixDrivenOpacity:1 removingIfIdentity:false];
+
+}
+
+%end
+
+%hook CSNotificationAdjunctListViewController
+
+- (void)viewDidLoad { // override the appearance style of the player
+
+	%orig;
+
+	if ([lockscreenPlayerStyleOverrideValue intValue] != 0) [self setOverrideUserInterfaceStyle:[lockscreenPlayerStyleOverrideValue intValue]];
 
 }
 
@@ -491,6 +515,7 @@
 			[preferences registerObject:&lockscreenPlayerArtworkOpacityValue default:@"1.0" forKey:@"lockscreenPlayerArtworkOpacity"];
 			[preferences registerObject:&lockscreenPlayerArtworkDimValue default:@"0.0" forKey:@"lockscreenPlayerArtworkDim"];
 			[preferences registerBool:&lockscreenPlayerArtworkBackgroundTransitionSwitch default:NO forKey:@"lockscreenPlayerArtworkBackgroundTransition"];
+			[preferences registerObject:&lockscreenPlayerStyleOverrideValue default:@"0" forKey:@"lockscreenPlayerStyleOverride"];
 			if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 14) %init(VioletLockScreenPlayer13);
 			else %init(VioletLockScreenPlayer14);
 		}

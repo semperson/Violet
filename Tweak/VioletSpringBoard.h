@@ -20,6 +20,7 @@ NSString* lockscreenPlayerArtworkBlurAmountValue = @"1.0";
 NSString* lockscreenPlayerArtworkOpacityValue = @"1.0";
 NSString* lockscreenPlayerArtworkDimValue = @"0.0";
 BOOL lockscreenPlayerArtworkBackgroundTransitionSwitch = NO;
+NSString* lockscreenPlayerStyleOverrideValue = @"0";
 
 UIImageView* lockScreenArtworkBackgroundImageView = nil;
 UIVisualEffectView* lockScreenBlurView = nil;
@@ -102,6 +103,9 @@ UIView* controlCenterModuleDimView = nil;
 
 @interface UIView (Violet)
 @property(nonatomic, assign, readwrite)MTMaterialView* backgroundMaterialView;
+@end
+
+@interface CSNotificationAdjunctListViewController : UIViewController
 @end
 
 @interface SBIconController : UIViewController
