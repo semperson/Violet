@@ -21,7 +21,7 @@
 			<key>key</key>
 			<string>musicArtworkBackground</string>
 			<key>label</key>
-			<string>Artwork As Background</string>
+			<string>Artwork as Background</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -103,7 +103,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Artwork Dim</string>
+			<string>Artwork Dim Amount</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -130,7 +130,7 @@
 			<key>label</key>
 			<string>Hiding - Now Playing</string>
 			<key>footerText</key>
-			<string>Hiding Volume Slider Images Does Not Support iOS 14</string>
+			<string>Hiding volume slider images does not support iOS 14</string>
 			<key>isStaticText</key>
 			<true/>
 		</dict>
@@ -337,29 +337,6 @@
 			<string>musicHideQueueModeBadge</string>
 			<key>label</key>
 			<string>Hide Queue Mode Badge</string>
-		</dict>
-
-		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>label</key>
-			<string>Miscellaneous</string>
-			<key>footerText</key>
-			<string>iOS 13 Only</string>
-			<key>isStaticText</key>
-			<true/>
-		</dict>
-        <dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>love.litten.violetpreferences</string>
-			<key>key</key>
-			<string>roundedMiniPlayerCorners</string>
-			<key>label</key>
-			<string>Rounded Mini Player Corners</string>
 		</dict>
 
 	</array>

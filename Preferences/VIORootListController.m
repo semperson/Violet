@@ -14,7 +14,7 @@
 
 
     self.enableSwitch = [UISwitch new];
-    [[self enableSwitch] setOnTintColor:[UIColor colorWithRed:0.02 green:0.14 blue:0.28 alpha:1]];
+    [[self enableSwitch] setOnTintColor:[UIColor colorWithRed:0.64 green:0.49 blue:1 alpha:1]];
     [[self enableSwitch] addTarget:self action:@selector(setEnabled) forControlEvents:UIControlEventTouchUpInside];
 
 

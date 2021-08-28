@@ -21,7 +21,7 @@
 			<key>key</key>
 			<string>lockscreenArtworkBackground</string>
 			<key>label</key>
-			<string>Artwork As Background</string>
+			<string>Artwork as Background</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -103,7 +103,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Artwork Dim</string>
+			<string>Artwork Dim Amount</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -152,7 +152,7 @@
 			<key>key</key>
 			<string>lockscreenPlayerArtworkBackground</string>
 			<key>label</key>
-			<string>Artwork As Background</string>
+			<string>Artwork as Background</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -234,7 +234,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Artwork Dim</string>
+			<string>Artwork Dim Amount</string>
 		</dict>
 		<dict>
 			<key>cell</key>

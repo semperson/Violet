@@ -1,6 +1,6 @@
-#import "VIOContributorsSubPreferencesListController.h"
+#import "VIOCreditsSubPreferencesListController.h"
 
-@implementation VIOContributorsSubPreferencesListController
+@implementation VIOCreditsSubPreferencesListController
 
 - (void)viewDidLoad {
 
