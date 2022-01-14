@@ -1,4 +1,4 @@
-# Violet
+# Violet 🎀
 Sweet addition to your wallpaper
 
 ## Installation
